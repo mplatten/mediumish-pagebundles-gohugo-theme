@@ -1,0 +1,16 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	{{ with .Site.Params.logo }}
+	<link rel="icon" href="{{ . | urlize | relURL }}">
+	{{ end }}
+	<title>{{ .Page.Title }} | {{ .Site.Title }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+    {{ with .Site.Params.meta.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
+    <meta name="robots" content="{{ with .Params.Robots }}{{ . }}{{ else }}{{ with .Site.Params.robots }}{{ . }}{{ end }}{{ end }}" />
+    {{ hugo.Generator }}
+    <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "index.xml" | absURL }}">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/medium.css">
+    {{ with .Site.Params.social.twitter }}<link rel="me" href="https://twitter.com/{{ . }}" />{{ end }}
+</head>

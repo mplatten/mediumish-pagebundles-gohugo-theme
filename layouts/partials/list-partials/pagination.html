@@ -1,0 +1,25 @@
+<!-- Pagination
+================================================== -->
+<div class="bottompagination">
+  <div class="navigation" role="navigation">
+    {{ if gt .TotalPages 1 }}
+      <div class="pagination">
+        {{ if .HasPrev }}
+          <a class="ml-1 mr-1" href="{{.Prev.URL}}">&laquo; Vorige</a>
+          <a class="ml-1 mr-1" href="{{.Prev.URL}}">{{ .Prev.PageNumber }}</a>
+        {{ else }}
+          <span>&laquo; Vorige</span>
+        {{ end }}
+
+        <span class="ml-1 mr-1">{{ .PageNumber }}</span>
+
+        {{ if .HasNext }}
+          <a class="ml-1 mr-1" href="{{.Next.URL}}">{{ .Next.PageNumber }}</a>
+          <a class="ml-1 mr-1" href="{{.Next.URL}}">Nächste &raquo;</a>
+        {{ else }}
+          <span>Nächste &raquo;</span>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</div>

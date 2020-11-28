@@ -1,0 +1,133 @@
+baseURL = "https://example.com" # No slash (/) in the end of site address!
+languageCode = "de-DE"
+title = "<title of this site>"
+theme = "mediumish-pagebundles"
+summaryLength = 25
+rssLimit = 5
+copyright = "<your name here>"
+enableEmoji = true
+publishDir = "public"
+#disqusShortname = "your-shortname-here"
+#googleAnalytics = "UA-1XXXXXXX1-1"
+pluralizelisttitles = false
+
+defaultMarkdownHandler = "goldmark"
+
+[markup.goldmark]
+  [markup.goldmark.extensions]
+    definitionList = true
+    footnote = true
+    linkify = true
+    strikethrough = true
+    table = true
+    taskList = true
+    typographer = true
+  [markup.goldmark.parser]
+    attribute = true
+    autoHeadingID = true
+  [markup.goldmark.renderer]
+    hardWraps = false
+    unsafe = true # Allows HTML-tags in MD, e.g. the HTML5 video-tag so that video can play in a page.
+    xHTML = false
+  [markup.highlight]
+    codeFences = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+  [markup.tableOfContents]
+    endLevel = 3
+    startLevel = 2
+
+[params]
+#  logo = "/images/logo.png"
+  description ="Welcome!"
+  #mailchimp = "you can provide a mailchimp-link here"
+  robots = "noarchive"
+
+[params.author]
+  name = "<your name>"
+#  thumbnail = "/images/author.jpg"
+  description = ""
+
+[params.index]
+  picture = "/images/welcome.jpg"
+  title = "Welcome!"
+  subtitle = ""
+  mdtext = '''
+  **Read My [Blog](/blog/) first**,\
+  \
+and then read another post.
+'''
+  alertbar = false
+
+[params.social]
+#  github = "<username>"
+#  facebook = "<username>"
+#  facebookmessenger = "<username>"
+#  twitter = "<username>"
+  rssfeed = "/index.xml"
+
+## Main Menu
+[[menu.main]]
+    name = "Blog"
+    weight = 100
+    identifier = "blog"
+    url = "/blog/"
+# [[menu.main]]
+#    name = "Other"
+#    weight = 200
+#    identifier = "other"
+#    url = "/other/"
+# [[menu.main]]
+#    name = "About Me"
+#    identifier = "about"
+#    weight = 400
+#    url = "/"
+[[menu.main]]
+    name = "Datenschutzerklärung"
+    identifier = "datenschutz"
+    weight = 500
+    url = "/datenschutz/"
+[[menu.main]]
+    name = "Impressum"
+    identifier = "imprint"
+    weight = 600
+    url = "/impressum/"
+
+[sitemap]
+    changefreq = "monthly"
+    priority = 0.5
+    filename = "sitemap.xml"
+
+[imaging.exif]
+    # This will strip EXIF-Data from *processed* images.
+    # PLEASE BE AWARE: **Hugo copies the *original file* (original
+    # filenname) unaltered into the `publish`-folder** too—this
+    # might be an issue with security due to unaltered EXIF-
+    # Data in the original. This is a Hugo problem, at the
+    # time (Nov 2020) there ist no way to prevent Hugo
+    # from doing so.
+    #
+     # Regexp matching the fields you want to Exclude from the (massive) set of Exif info
+    # available. As we cache this info to disk, this is for performance and
+    # disk space reasons more than anything.
+    # If you want it all, put ".*" in this config setting.
+    # Note that if neither this or ExcludeFields is set, Hugo will return a small
+    # default set.
+    includeFields = ""
+
+    # Regexp matching the Exif fields you want to exclude. This may be easier to use
+    # than IncludeFields above, depending on what you want.
+    excludeFields = ".*"
+
+    # Hugo extracts the "photo taken" date/time into .Date by default.
+    # Set this to true to turn it off.
+    disableDate = true
+
+    # Hugo extracts the "photo taken where" (GPS latitude and longitude) into
+    # .Long and .Lat. Set this to true to turn it off.
+    disableLatLong = true

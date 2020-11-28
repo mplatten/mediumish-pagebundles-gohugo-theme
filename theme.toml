@@ -1,0 +1,19 @@
+name = "mediumish-pagebundles"
+license = "MIT"
+licenselink = "https://github.com/mplatten/mediumish-pagebundles-theme-gohugo/blob/master/LICENSE"
+description = "A lightweight, fast, mediumish theme for gohugo with support for page bundles and automatic image processing. This is a modification of lgaidas port to hugo 'mediumish'."
+homepage = "https://github.com/mplatten/mediumish-pagebundles-gohugo-theme"
+tags = ["Blog", "Responsive", "Personal", "Minimal", "Clean", "Disqus", "Google Analytics", "Page Bundles", "Image Processing", "Print Style", "RSS Feed"]
+features = []
+min_version = "0.59.0"
+
+[author]
+  name = "mplatten"
+  repo = "https://github.com/mplatten/mediumish-pagebundles-gohugo-theme"
+
+# If porting an existing theme
+
+[original]
+  name = "mediumish"
+  homepage ="http://lgaida.de"
+  repo = "https://github.com/lgaida/mediumish-gohugo-theme"

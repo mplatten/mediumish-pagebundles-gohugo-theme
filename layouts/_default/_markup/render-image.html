@@ -1,0 +1,6 @@
+{{ $image := .Page.Resources.GetMatch .Destination }}
+{{ if gt $image.Width 600 }}
+    {{ $image = $image.Resize "800x q80" }}
+{{ end }}
+<figure class="center"><img src="{{ $image.RelPermalink | safeURL }}" {{ with .Text }} alt="{{ . }}" {{ end }} {{ with .Title }} title="{{ . }}" {{ end }} width="800px" /><br />
+{{ with .Title }}<figcaption class="caption">{{ . }}</figcaption>{{ end }}</figure>

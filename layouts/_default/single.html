@@ -1,0 +1,33 @@
+{{ define "header"}}
+    {{- partial "_shared/navbar.html" . -}}
+{{ end }}
+
+{{ define "main" }}
+<div class="main-content">
+<!-- Begin standalone
+================================================== -->
+<div class="container">
+	<div class="row">
+        <div class="col-md-1"></div>
+		<div class="col-md-10">
+			<article class="h-entry"><div class="mainheading">
+                <p><span class="print-only">{{ .Site.Title }}, </span>{{ dateFormat "02.01.2006" .Date }}<span class="print-only">, {{ .Permalink }}</span></p>
+				<h1 class="posttitle p-name">{{ .Title }}</h1>
+                {{ with .Params.Subtitle }}<p><strong>{{ . }}</strong></p>{{ end }}
+            </div>
+			<div class="article-post e-content">
+				{{ .Content }}
+			</div></article>
+		</div>
+        <div class="col-md-1"></div>
+	</div>
+</div>
+<!-- End standalone
+================================================== -->
+</div>
+{{- partial "_shared/alertbar.html" . -}}
+{{ end }}
+
+{{ define "footer"}}
+    {{- partial "_shared/footer.html" . -}}
+{{ end }}

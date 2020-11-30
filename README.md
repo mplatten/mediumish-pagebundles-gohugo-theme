@@ -25,10 +25,10 @@ This theme for gohugo is a modified version of [lgaida's customized port](https:
 
 ## Added/modified features by mplatten
 
-This is a modified version of lgaidas port to Hugo. Changes to that are:
+This is a modified version of lgaida's port to Hugo. Changes to that are:
 
 + use with **page bundles** instead of assets in `/static` (works also)—keep content and its assets together
-+ **Automatic image resizing** (done by Hugo)--feel free to save Markdown-text and your original images of any size for future use and other assets in a subfolder of `/contents` (i. e. page bundles), Hugo will resize the *published* images for a great performance and strip EXIF-data (please be advised: Hugo publishes a copy of the unaltered original file with its original filename in `/public` too, EXIF not altered! This is a Hugo problem which might be an issue with security.)
++ **Automatic image resizing** (done by Hugo)--feel free to save Markdown-text and your original images of any size for future use and other assets in a subfolder of `/content` (i. e. page bundles), Hugo will resize the *published* images for a great performance and strip EXIF-data (please be advised: Hugo publishes a copy of the unaltered original file with its original filename in `/public` too, EXIF not altered! This is a Hugo problem which might be an issue with security.)
 + **Improved overall performance**: Google Pagespeed Insights/Lighthouse >90, pages usually at peek performance
 + **Print-Style**: Site title and page-URL are printed on top before `title`, Hyperlink-URLs will be displayed in brackets behind each link in print so anyone can resolve them even on paper, `<video>` won't show in print, no other webpage-elements on paper
 + Full-text **RSS-Feed** at `<baseurl>/index.xml` (Thanks to code taken from funkydan2, <https://github.com/funkydan2/alpha-church>)
@@ -52,7 +52,7 @@ You can--this is a good idea--move the contents of the folder `exampleSite` to t
 
 ## Preface
 
-Each page/article should have its own folder under `content`, e. g. `content/2020-11-28-demo-page`. In this folder there *must* be a `index.md` (no other filename) which has frontmatter and the page's content. Assets like files should be in this folder too.
+Each page/article should have its own folder under `content`, e. g. `content/2020-11-28-demo-page`. In this folder there *must* be an `index.md` (no other filename) which has frontmatter and the page's content. Assets like files should be in this folder too.
 
 Other assets can be placed somewhere within the `static` folder of your gohugo website. This allows them to be easily referenced from the config.toml. You may structure the files and folders within `static` however you'd like, with one exception: There must be a file named `jumbotron.jpg` present under the path `static/images` as it is referenced in the .css.
 
@@ -73,7 +73,7 @@ subtitle: "Some more information about this content"
 summary: "This is a demo page. Search engines like this field."
 date: 2020-11-28T00:00:00+01:00
 publishdate: 2020-11-28T00:00:00+01:00
-image: "/blog/test/2007-schwarzewueste.jpg"
+image: "/blog/2020-11-28-demo-page/2007-schwarzewueste.jpg"
 type: post
 tags: ["Tag 1","Tag 2"]
 comments: false

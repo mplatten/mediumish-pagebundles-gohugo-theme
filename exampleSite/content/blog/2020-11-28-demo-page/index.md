@@ -22,7 +22,7 @@ The page bundle feature requires a folder with a distinct name (here: `2020-11-2
 
 The folders main article *must* be named `index.md`.
 
-Assets are put into that folder too. For list pages to show thrumbnails it is necessary that the post's main image is linked in frontmatter with *full path*, see above in this page's frotmatter: `image: "/blog/2020-11-28-demo-page/2007-schwarzewueste.jpg"`. This image will only show on list pages--if you want a copy in single view, you must link it like in the examle above. This gives you control over where images show and the possibility to have an explicit thumbnail for each article in list view.
+Assets are put into that folder too. For list pages to show thumbnails it is necessary that the post's main image is linked in frontmatter with *full path*, see above in this page's frotmatter: `image: "/blog/2020-11-28-demo-page/2007-schwarzewueste.jpg"`. This image will only show on list pages--if you want a copy in single view, you must link it like in the examle above. This gives you control over where images show and the possibility to have an explicit thumbnail for each article in list view.
 
 ## Hugo's Shortcodes
 

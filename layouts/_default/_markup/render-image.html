@@ -2,5 +2,4 @@
 {{ if gt $image.Width 600 }}
     {{ $image = $image.Resize "800x q80" }}
 {{ end }}
-<figure class="center"><img src="{{ $image.RelPermalink | safeURL }}" {{ with .Text }} alt="{{ . }}" {{ end }} {{ with .Title }} title="{{ . }}" {{ end }} width="800" /><br />
-{{ with .Title }}<figcaption class="caption">{{ . }}</figcaption>{{ end }}</figure>
+<figure class="center"><img src="{{ $image.RelPermalink | safeURL }}" {{ with .Text }}alt="{{ . }}" {{ end }} {{ with .Title }} title="{{ . }}"{{ end }} width="800" />{{ with .Title }}<br /><figcaption class="caption">{{ . }}</figcaption>{{ end }}</figure>

@@ -9,10 +9,15 @@
     {{ with .Site.Params.meta.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
     <meta name="robots" content="{{ with .Params.Robots }}{{ . }}{{ else }}{{ with .Site.Params.robots }}{{ . }}{{ end }}{{ end }}" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="{{ with .Site.Params.social.twitter }}{{ . }}{{ end }}" />
+    {{ with .Site.Params.social.twitter }}<meta name="twitter:site" content="{{ . }}" />{{ end }}
     <meta name="twitter:title" content="{{ with .Page.Title }}{{ . }}{{ end }}" />
     <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
-    <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ with .Params.image }}{{ . | urlize | relURL }}{{ end }}" />
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ with .Params.image }}{{ . | urlize | relURL }}{{ else }}{{ with .Site.Params.index.picture }}{{ . | urlize | relURL }}{{ end }}{{ end }}" />
+    <meta property="og:title" content="{{ with .Page.Title }}{{ . }}{{ end }}" />
+    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+    <meta property="og:image" content="{{ .Site.BaseURL }}{{ with .Params.image }}{{ . | urlize | relURL }}{{ else }}{{ with .Site.Params.index.picture }}{{ . | urlize | relURL }}{{ end }}{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:type" content="article">
     {{ hugo.Generator }}
     <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "index.xml" | absURL }}">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/bootstrap.min.css">

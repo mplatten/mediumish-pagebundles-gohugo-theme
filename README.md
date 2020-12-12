@@ -38,6 +38,7 @@ This is a modified version of lgaida's port to Hugo. Changes to that are:
 + All frameworks served locally, no CDNs, thus better GDPR/DSGVO-compliancy due to no third-parties
 + no embedded fonts -- Google Pagespeed Insights' Lighthouse likes few chains
 + FontAwesome social-media icons replaced by small local SVGs
++ Twitter Cards and Facebook Open Graph
 
 
 ## Installation

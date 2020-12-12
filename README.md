@@ -53,7 +53,7 @@ You can--this is a good idea--move the contents of the folder `exampleSite` to t
 
 ## Preface
 
-Each page/article should have its own folder under `content`, e. g. `content/2020-11-28-demo-page`. In this folder there *must* be an `index.md` (no other filename) which has frontmatter and the page's content. Assets like files should be in this folder too.
+Each page/article should have its own folder under `content`, e. g. `content/2020-11-28-demo-page`. In this folder there *must* be an `index.md` (no other filename) which has frontmatter and the page's content. Put assets like images in this folder too, not in `static`.
 
 Other assets can be placed somewhere within the `static` folder of your gohugo website. This allows them to be easily referenced from the config.toml. You may structure the files and folders within `static` however you'd like, with one exception: There must be a file named `jumbotron.jpg` present under the path `static/images` as it is referenced in the .css.
 
@@ -90,9 +90,9 @@ As you can see, the image's title is shown as a caption.
 
 The page bundle feature requires a folder with a distinct name (here: `2020-11-28-demo-page`).
 
-The folders main article *must* be named `index.md`.
+The main article in that folder *must* be named `index.md`.
 
-Assets are put into that folder too. For list pages to show thumbnails it is necessary that the post's main image is linked in frontmatter with *full path*, see above in this page's frotmatter: `image: "/blog/test/2007-schwarzewueste.jpg"`. This image will only show on list pages--if you want a copy in single view, you must link it like in the examle above. This gives you control over where images show and the possibility to have an explicit thumbnail for each article in list view.
+Assets are put into that folder too. For list pages to show thumbnails it is necessary that the post's main image is linked in frontmatter with *full path*, see above in this page's frotmatter: `image: "/blog/test/2007-schwarzewueste.jpg"`. This image will only show on list pages--if you want a copy in single view, you must link it like in the examle above. This gives you control over where images show and the possibility to have an explicit thumbnail for each article in list view. Twitter Cards and Facebook will use this image too.
 
 ## Hugo's Shortcodes
 
@@ -112,7 +112,7 @@ Shortcodes are an easy way to inlude content from e.g. Twitter or Youtube:
 
 Now try to print this page so you can see the print style in action.
 
-By the way: launch hugo with `hugo --gc --minify` for automatic clean up an smaller files.
+By the way: launch hugo with `hugo --gc --minify` for automatic clean up and smaller files.
 ```
 
 `publishdate`: is displayed at the top of the single-view\
@@ -267,4 +267,4 @@ and then read another post.
 
 ## License
 
-Like the original jekyll-theme an lgaida's port to gohugo this modified theme is released under the MIT License. Read more at the [License](//github.com/mplatten/mediumish-pagebundles-gohugo-theme/blob/master/LICENSE) itself.
+Like the original jekyll-theme and lgaida's port to gohugo this modified theme is released under the MIT License. Read more at the [License](//github.com/mplatten/mediumish-pagebundles-gohugo-theme/blob/master/LICENSE) itself.

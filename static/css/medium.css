@@ -60,6 +60,9 @@ License: https://www.wowthemes.net/freebies-license/
         .article-post video {
           display: none;
         }
+        .article-post audio {
+          display: none;
+        }
 }
 
 .center {

@@ -35,10 +35,10 @@ This is a modified version of lgaida's port to Hugo. Changes to that are:
 + Image titles will be shown as a caption, e. g. `![Alt text wont't show, use it anyway, always](image.jpg This title shows as a caption below the image)`. The file `image.jpg` should be placed in the same folder, text-file must be named `index.md`.
 + Subtitles with `subtitle: "Text"` in frontmatter on each page (if set, can be omited)
 + Control search engine indexing with `robots: "value"` in frontmatter on each page individually (if it is used, it will override the values in config.toml for that page) if you dont use `/static/robots.txt`
++ Twitter Cards and Facebook Open Graph
 + All frameworks served locally, no CDNs, thus better GDPR/DSGVO-compliancy due to no third-parties
 + no embedded fonts -- Google Pagespeed Insights' Lighthouse likes few chains
 + FontAwesome social-media icons replaced by small local SVGs
-+ Twitter Cards and Facebook Open Graph
 
 
 ## Installation
@@ -75,7 +75,6 @@ summary: "This is a demo page. Search engines like this field."
 date: 2020-11-28T00:00:00+01:00
 publishdate: 2020-11-28T00:00:00+01:00
 image: "/blog/2020-11-28-demo-page/2007-schwarzewueste.jpg"
-type: post
 tags: ["Tag 1","Tag 2"]
 comments: false
 robots: "noindex, nofollow, noarchive"

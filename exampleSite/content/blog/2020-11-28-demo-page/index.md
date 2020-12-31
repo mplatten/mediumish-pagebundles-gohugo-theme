@@ -5,7 +5,6 @@ summary: "This is a demo page. Search engines like this field."
 date: 2020-11-28T00:00:00+01:00
 publishdate: 2020-11-28T00:00:00+01:00
 image: "/blog/2020-11-28-demo-page/2007-schwarzewueste.jpg"
-type: post
 tags: ["Tag 1","Tag 2"]
 comments: false
 robots: "noindex, nofollow, noarchive"

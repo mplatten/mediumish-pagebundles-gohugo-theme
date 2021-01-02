@@ -25,7 +25,11 @@ Assets are put into that folder too. For list pages to show thumbnails it is nec
 
 ## Hugo's Shortcodes
 
-Shortcodes are an easy way to inlude content from e.g. Twitter or Youtube:
+Shortcodes are an easy way to inlude content:
+
+{{</* audio src="PATH TO AUDIO FILE" */>}} to include a (local) audio file.
+
+{{</* video src="PATH TO VIDEO FILE" */>}} to include a (local) video file.
 
 **Example Twitter**:
 

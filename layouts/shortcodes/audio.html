@@ -1,0 +1,6 @@
+<audio controls>
+  {{ with .Get "src" }}
+  <source src="{{ . | relURL }}" type="audio/mpeg">
+  <a href="{{ . | relURL }}">🎵 Anhören</a>
+  {{ end }}
+</audio>

@@ -1,0 +1,6 @@
+<video width="568" height="320" controls>
+  {{ with .Get "src" }}
+  <source src="{{ . | relURL }}" type="video/mp4">
+  <a href="{{ . | relURL }}">Video ansehen</a>
+  {{ end }}
+</video>

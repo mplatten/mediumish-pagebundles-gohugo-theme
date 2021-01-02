@@ -27,7 +27,7 @@ defaultMarkdownHandler = "goldmark"
     autoHeadingID = true
   [markup.goldmark.renderer]
     hardWraps = false
-    unsafe = true # Allows HTML-tags in MD, e.g. the HTML5 video-tag so that video can play in a page.
+    unsafe = false # If true, HTML-tags in MD are allowed.
     xHTML = false
   [markup.highlight]
     codeFences = true

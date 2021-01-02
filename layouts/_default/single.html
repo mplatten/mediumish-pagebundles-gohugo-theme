@@ -11,7 +11,7 @@
         <div class="col-md-1"></div>
 		<div class="col-md-10">
 			<article class="h-entry"><div class="mainheading">
-                <p><span class="print-only">{{ .Site.Title }}, </span>{{ dateFormat "02.01.2006" .Date }}<span class="print-only">, {{ .Permalink }}</span></p>
+                <p><span class="print-only">{{ .Site.Title }}, {{ dateFormat "02.01.2006" .Date }}, {{ .Permalink }}</span><span class="no-print">{{ with .Params.Subtitle }}{{ else }}{{ dateFormat "02.01.2006" .Date }}{{ end }}</span></p>
 				<h1 class="posttitle p-name">{{ .Title }}</h1>
                 {{ with .Params.Subtitle }}<p><strong>{{ . }}</strong></p>{{ end }}
             </div>

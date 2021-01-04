@@ -6,7 +6,6 @@ date: 2020-11-28T00:00:00+01:00
 publishdate: 2020-11-28T00:00:00+01:00
 image: "/blog/2020-11-28-demo-page/2007-schwarzewueste.jpg"
 tags: ["Tag 1","Tag 2"]
-comments: false
 robots: "noindex, nofollow, noarchive"
 ---
 This is some Text with an image below. Hugo will resize images to a long side size of 800 Pixels automatically with this theme--the original file is untouched, so you can simply use images without any worries on optimization, Hugo does that for you:

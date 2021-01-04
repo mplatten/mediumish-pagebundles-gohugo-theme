@@ -5,28 +5,24 @@
 {{ define "main" }}
     <div class="main-content">
         <header class="text-center">
-            {{ with .Site.Params.index.picture }}
+            {{ with .Params.image }}
                 <img src="{{ . | urlize | relURL }}" class="rounded-circle text-center index-image" alt="Willkommen" width="400">
             {{ end }}
-            <h1 class="index-title">{{ .Site.Params.index.title }}</h1>
+            <h1 class="index-title">{{ .Title }}</h1>
         </header>
 
         <section class="text-center">
-            {{ with .Site.Params.index.subtitle }}
-            <h3 class="index-sub">{{ . }}</h3>
-            {{ end }}
-            {{ with .Site.Params.index.mdtext }}
-            <h6 class="index-text">{{ . | markdownify }}</h6>
-            {{ end }}
+            <h6 class="index-text">{{ .Content }}</h6>
         </section>
     </div>
 
     <h3 class="index-sub text-center">Die drei neuesten Inhalte</h3>
     <div class="row listrecent">
-        {{ range first 3 .Site.RegularPages }}
+        {{ range first 3 ( where .Site.RegularPages "Title" "!=" "Datenschutzerklärung" ) }}
             {{- partial "list-partials/postbox.html" . -}}
         {{end}}
     </div>
+    <h4 class="index-sub text-center"><a href="{{ .Site.BaseURL }}/blog/">Blog</a> &middot; <a href="{{ .Site.BaseURL }}/predigten/">Alle Predigten</a></h4><br />
 
     {{- partial "_shared/social.html" . -}}
     {{ if isset .Site.Params.index "alertbar" }}

@@ -18,7 +18,7 @@
 
     <h3 class="index-sub text-center">Die drei neuesten Inhalte</h3>
     <div class="row listrecent">
-        {{ range first 3 ( where .Site.RegularPages "Title" "!=" "Datenschutzerklärung" ) }}
+        {{ range first 3 ( where .Site.RegularPages "Params.private" "!=" true) }}
             {{- partial "list-partials/postbox.html" . -}}
         {{end}}
     </div>

@@ -36,6 +36,7 @@ This is a modified version of lgaida's port to Hugo. Changes to that are:
 + Subtitles with `subtitle: "Text"` in frontmatter on each page (if set, can be omited)
 + Control search engine indexing with `robots: "value"` in frontmatter on each page individually (if it is used, it will override the values in config.toml for that page) if you dont use `/static/robots.txt`
 + Twitter Cards and Facebook Open Graph
++ Pages can be excluded from listing
 + All frameworks served locally, no CDNs, thus better GDPR/DSGVO-compliancy due to no third-parties
 + no embedded fonts -- Google Pagespeed Insights' Lighthouse likes few chains
 + FontAwesome social-media icons replaced by small local SVGs
@@ -77,6 +78,7 @@ publishdate: 2020-11-28T00:00:00+01:00
 image: "/blog/2020-11-28-demo-page/2007-schwarzewueste.jpg"
 tags: ["Tag 1","Tag 2"]
 comments: false
+private: false
 robots: "noindex, nofollow, noarchive"
 ---
 This is some Text with an image below. Hugo will resize images to a long side size of 800 Pixels automatically with this theme--the original file is untouched, so you can simply use images without any worries on optimization, Hugo does that for you:
@@ -84,6 +86,8 @@ This is some Text with an image below. Hugo will resize images to a long side si
 ![Schwarze Wüste](2007-schwarzewueste.jpg "Schwarze Wüste, Ägypten.")
 
 As you can see, the image's title is shown as a caption.
+
+You can exclude pages from list pages with ˋprivate: trueˋ in frontmatter.
 
 ## Structure
 

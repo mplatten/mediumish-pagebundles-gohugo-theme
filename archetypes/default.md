@@ -8,5 +8,6 @@ image: ""
 tags:[]
 comments: false
 robots: "noarchive"
+private: false
 draft: true
 ---

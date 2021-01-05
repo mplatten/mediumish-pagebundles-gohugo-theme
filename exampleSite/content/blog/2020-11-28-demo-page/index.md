@@ -7,12 +7,15 @@ publishdate: 2020-11-28T00:00:00+01:00
 image: "/blog/2020-11-28-demo-page/2007-schwarzewueste.jpg"
 tags: ["Tag 1","Tag 2"]
 robots: "noindex, nofollow, noarchive"
+private: false
 ---
 This is some Text with an image below. Hugo will resize images to a long side size of 800 Pixels automatically with this theme--the original file is untouched, so you can simply use images without any worries on optimization, Hugo does that for you:
 
 ![Schwarze Wüste](2007-schwarzewueste.jpg "Schwarze Wüste, Ägypten.")
 
 As you can see, the image's title is shown as a caption.
+
+You can exclude pages from list pages with ˋprivate: trueˋ in frontmatter.
 
 ## Structure
 

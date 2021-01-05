@@ -185,14 +185,6 @@ defaultMarkdownHandler = "goldmark"
   description = ""
 
 [params.index]
-  picture = "/images/welcome.jpg"
-  title = "Welcome!"
-  subtitle = ""
-  mdtext = '''
-  **Read My [Blog](/blog/) first**,\
-  \
-and then read another post.
-'''
   alertbar = false
 
 [params.social]

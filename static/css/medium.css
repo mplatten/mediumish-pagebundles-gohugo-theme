@@ -13,56 +13,74 @@ License: https://www.wowthemes.net/freebies-license/
 
 @media print {
         @page {
-            margin: 2.5cm
-        }
+                margin: 2.5cm
+            }
 
-        .print-only{
-            display: inline;
-        }
+            .print-only{
+                display: inline;
+            }
 
-        .no-print{
-            display: none;
-        }
+            .no-print{
+                display: none;
+            }
 
-        a:link {
-            text-decoration: none;
-        }
+            a:link {
+                text-decoration: none;
+                color: black;
+            }
 
-        a:after {
-            content: " (" attr(href) ") ";
-            color: gray; font-size: smaller;
-            text-decoration: none;
-        }
+            a:after {
+                content: " <" attr(href) "> ";
+                color: dimgray; font-size: smaller;
+                text-decoration: none;
+            }
 
-        .article-post blockquote {
-            border-left: 2px solid black;
-            color: black;
-        }
+            a.footnote-ref:after {
+                display: none;
+            }
 
-        .article-post p, li {
-            font-size: 16pt;
-            orphans: 3;
-            widows: 3;
-        }
+            .article-post blockquote {
+                border-left: 2px solid black;
+                color: black;
+            }
 
-        .article-post blockquote {
-            page-break-inside: auto;
-        }
+            .article-post p, li {
+                font-size: 16pt;
+                orphans: 3;
+                widows: 3;
+            }
 
-        .article-post img {
-            max-width: 12cm;
-        }
+            .article-post blockquote {
+                page-break-inside: auto;
+            }
 
-        .article-post pre code {
-            line-height: normal;
-            color: black;
-        }
-        .article-post video {
-          display: none;
-        }
-        .article-post audio {
-          display: none;
-        }
+            .article-post img {
+                max-width: 12cm;
+            }
+
+            .article-post pre code {
+                line-height: normal;
+                color: black;
+                word-wrap: break-word;
+            }
+            .article-post video {
+              display: none;
+            }
+            .article-post audio {
+              display: none;
+            }
+            .footnotes li {
+              font-size: small; line-height: 110%;
+            }
+            .footnotes li p {
+              font-size: small; margin: 6pt 0 0 0; line-height: 110%;
+            }
+            a.footnote-ref {
+              font-size: small; text-decoration: none; line-height: 110%;
+            }
+            a.footnote-backref {
+              display: none;
+            }
 }
 
 .center {
